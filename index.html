@@ -6,12 +6,10 @@
 		<script type="text/javascript" src="angular.js"></script>
 	</head>
 
-	<body ng-init="hourOfDay = 18">
+	<body ng-init="hourOfDay = 12">
 		<h1>Hello Angular!</h1>
-		<p ng-if="hourOfDay < 12">Good Morning</p>
-		<p ng-if="hourOfDay  == 12">Good Afternoon</p>
-		<p ng-if="hourOfDay > 12 && hourOfDay < 17">Good Evening</p>
-		<p ng-if="hourOfDay > 17">Good Night</p>
+		<p ng-if="hourOfDay  == 12">By ng-bind : Good Afternoon <span ng-bind="hourOfDay"></span></p>
+		<p ng-if="hourOfDay  == 12">By {{}} : Good Afternoon {{hourOfDay}}</p>
 	</body>
 
 </html>
