@@ -10,14 +10,14 @@
 <body>
     <h1>Nested Controllers</h1>
     <div>Using two different Controllers :</div>
-    <div ng-controller="Ctrl1" ng-bind="testProp"></div>
-    <div ng-controller="Ctrl2" ng-bind="testProp"></div>
+    <div ng-controller="Ctrl1 as c1" ng-bind="c1.testProp"></div>
+    <div ng-controller="Ctrl2 as c2" ng-bind="c2.testProp"></div>
 
     <div>Using nested Controllers :</div>
-    <div ng-controller="Ctrl1">
-        <label ng-bind="testProp"></label>
-        <div ng-controller="Ctrl2">
-            <label ng-bind="testProp"></label>
+    <div ng-controller="Ctrl1 as c1">
+        <label ng-bind="c1.testProp"></label>
+        <div ng-controller="Ctrl2 as c2">
+            <label ng-bind="c2.testProp"></label>
         </div>
     </div>
 </body>
