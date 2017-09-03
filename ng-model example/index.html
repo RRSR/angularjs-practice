@@ -1,0 +1,28 @@
+<html ng-app="ngModelExample">
+
+<head>
+    <title>ng-model Example</title>
+    <script src="../angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-controller="ExamplesController">
+    <h1>ng -model Example App</h1>
+    <div><label>TextBox : </label><input type="text" ng-model="textString"></div>
+    <div><label>CheckBox : </label><input type="checkbox" ng-model="checkboxValue"></div>
+    <div><label>Date : </label><input type="date" ng-model="dateValue" ng-model-options="{timezone:'UTC'}"></div>
+    <div>
+        <label>Radio :</label>
+        <input type="radio" ng-model="radioValue" value="opt1">Option1
+        <input type="radio" ng-model="radioValue" value="opt2">Option2
+        <input type="radio" ng-model="radioValue" value="opt3">Option3
+    </div>
+    <div>
+        <div><label>Text input : </label><label ng-bind="textString"></label></div>
+        <div><label>CheckBox input : </label><label ng-bind="checkboxValue"></label></div>
+        <div><label>Date input : </label><label ng-bind="dateValue"></label></div>
+        <div><label>Radio input : </label><label ng-bind="radioValue"></label></div>
+    </div>
+</body>
+
+</html>
