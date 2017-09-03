@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="nestedControllers">
+
+<head>
+    <title>Nested Controllers</title>
+    <script src="../lib/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <h1>Nested Controllers</h1>
+    <div>Using two different Controllers :</div>
+    <div ng-controller="Ctrl1" ng-bind="testProp"></div>
+    <div ng-controller="Ctrl2" ng-bind="testProp"></div>
+
+    <div>Using nested Controllers :</div>
+    <div ng-controller="Ctrl1">
+        <label ng-bind="testProp"></label>
+        <div ng-controller="Ctrl2">
+            <label ng-bind="testProp"></label>
+        </div>
+    </div>
+</body>
+
+</html>
