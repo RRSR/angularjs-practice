@@ -6,10 +6,13 @@
     <script src="app.js"></script>
 </head>
 
-<body ng-controller="MoreDirectivesController">
+<body ng-controller="MoreDirectivesController as c">
     <h1>More Directives</h1>
-    <input type="checkbox" ng-model="checkboxValue">
-    <label ng-show="checkboxValue">Some content...</label>
+    <div ng-repeat="i in c.myArray">
+        <p>Name : <label ng-bind="i.Name"></label></p>
+        <p>Age : <label ng-bind="i.Age"></label></p>
+        <hr>
+    </div>
 </body>
 
 </html>
