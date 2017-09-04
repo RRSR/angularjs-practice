@@ -9,8 +9,14 @@
 <body ng-controller="MoreDirectivesController as c">
     <h1>More Directives</h1>
     <div ng-repeat="i in c.myArray">
-        <p>Name : <label ng-bind="i.Name"></label></p>
-        <p>Age : <label ng-bind="i.Age"></label></p>
+        <span>Index:<label ng-bind="$index"></label> | </span>
+        <span>First:<label ng-bind="$first"></label> | </span>
+        <span>Middle:<label ng-bind="$middle"></label> | </span>
+        <span>Last:<label ng-bind="$last"></label> | </span>
+        <span>Even:<label ng-bind="$even"></label> | </span>
+        <span>Odd:<label ng-bind="$odd"></label> | </span>
+        <span>Name:<label ng-bind="i.Name"></label> | </span>
+        <span>Age:<label ng-bind="i.Age"></label> | </span>
         <hr>
     </div>
 </body>
