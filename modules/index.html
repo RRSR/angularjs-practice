@@ -1,0 +1,17 @@
+<html ng-app="modulesApp">
+
+<head>
+    <title>Modules App</title>
+    <script src="../lib/angular.js"></script>
+    <script src="baseModule.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <h1>Modules App</h1>
+    <label ng-controller="BaseCtrl as base" ng-bind="base.message"></label>
+    <hr>
+    <label ng-controller="AppCtrl as app" ng-bind="app.message"></label>
+</body>
+
+</html>
