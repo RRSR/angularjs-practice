@@ -2,7 +2,9 @@
 
 <head>
     <title>Modules App</title>
+    <link rel="stylesheet" href="http://mbenford.github.io/ngTagsInput/css/ng-tags-input.min.css" />
     <script src="../lib/angular.js"></script>
+    <script src="http://mbenford.github.io/ngTagsInput/js/ng-tags-input.min.js"></script>
     <script src="baseModule.js"></script>
     <script src="app.js"></script>
 </head>
@@ -12,6 +14,9 @@
     <label ng-controller="BaseCtrl as base" ng-bind="base.message"></label>
     <hr>
     <label ng-controller="AppCtrl as app" ng-bind="app.message"></label>
+    <div ng-controller="AppCtrl as app">
+        <tags-input ng-model="app.tags"></tags-input>
+    </div>
 </body>
 
 </html>
